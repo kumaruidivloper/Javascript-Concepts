@@ -25,7 +25,8 @@ export class AppComponent {
 
     // Access the method 
     // here we pass the hometown value
-    printFullName.call(name, 'Kumbakonam', 'TamilNadu'); // Using printFullName method
+    printFullName.call(name, 'Kumbakonam', 'TamilNadu'); // Using Call method
+    printFullName.apply(name, ['Kumbakonam', 'TamilNadu']); // Using Apply method
 
 
     // Object 2
@@ -35,7 +36,8 @@ export class AppComponent {
     }
     // Access the method 
     // here we pass the hometown value
-    printFullName.call(name2, 'Tirunelveli', 'TamilNadu'); // Using printFullName method
+    printFullName.call(name2, 'Tirunelveli', 'TamilNadu'); // Using Call method
+    printFullName.apply(name2, ['Tirunelveli', 'TamilNadu']); // Using Apply method
 
 
     // Object 3
@@ -46,7 +48,8 @@ export class AppComponent {
 
     // Access the method 
     // here we pass the hometown value
-    printFullName.call(name3, 'Tirunelveli', 'TamilNadu'); // Using printFullName method
+    printFullName.call(name3, 'Tirunelveli', 'TamilNadu'); // Using Call method
+    printFullName.apply(name3, ['Tirunelveli', 'TamilNadu']); // Using Apply method
 
   }
 }
