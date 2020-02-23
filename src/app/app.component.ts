@@ -19,13 +19,13 @@ export class AppComponent {
 
     // common method for use display fullname
     // here we introduce [hometown argument]
-    let printFullName = function (hometown) {
-      console.log(this.firstname + ' ' + this.lastname + ' ' + 'from' + ' ' + hometown);
+    let printFullName = function (hometown, state) {
+      console.log(this.firstname + ' ' + this.lastname + ' ' + 'from' + ' ' + hometown + ', ' + state);
     }
 
     // Access the method 
     // here we pass the hometown value
-    printFullName.call(name, 'Kumbakonam'); // Using printFullName method
+    printFullName.call(name, 'Kumbakonam', 'TamilNadu'); // Using printFullName method
 
 
     // Object 2
@@ -35,7 +35,7 @@ export class AppComponent {
     }
     // Access the method 
     // here we pass the hometown value
-    printFullName.call(name2, 'Tirunelveli'); // Using printFullName method
+    printFullName.call(name2, 'Tirunelveli', 'TamilNadu'); // Using printFullName method
 
 
     // Object 3
@@ -46,7 +46,7 @@ export class AppComponent {
 
     // Access the method 
     // here we pass the hometown value
-    printFullName.call(name3, 'Tirunelveli'); // Using printFullName method
+    printFullName.call(name3, 'Tirunelveli', 'TamilNadu'); // Using printFullName method
 
   }
 }
