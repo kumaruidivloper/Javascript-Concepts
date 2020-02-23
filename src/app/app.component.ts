@@ -23,21 +23,12 @@ export class AppComponent {
       console.log(this.firstname + ' ' + this.lastname + ' ' + 'from' + ' ' + hometown + ', ' + state);
     }
 
-    // Access the method 
-    // here we pass the hometown value
-    printFullName.call(name, 'Kumbakonam', 'TamilNadu'); // Using Call method
-    printFullName.apply(name, ['Kumbakonam', 'TamilNadu']); // Using Apply method
-
 
     // Object 2
     let name2 = {
       firstname: 'Krishaan',
       lastname: 'Kumar',
     }
-    // Access the method 
-    // here we pass the hometown value
-    printFullName.call(name2, 'Tirunelveli', 'TamilNadu'); // Using Call method
-    printFullName.apply(name2, ['Tirunelveli', 'TamilNadu']); // Using Apply method
 
 
     // Object 3
@@ -46,10 +37,22 @@ export class AppComponent {
       lastname: 'Vasuki',
     }
 
-    // Access the method 
-    // here we pass the hometown value
-    printFullName.call(name3, 'Tirunelveli', 'TamilNadu'); // Using Call method
-    printFullName.apply(name3, ['Tirunelveli', 'TamilNadu']); // Using Apply method
+
+    // Bind Method Start
+    let printMyName = printFullName.bind(name, 'Kumbakonam', 'TamilNadu'); // store the function in let 
+    console.log(printMyName); // Can see the retun function
+    printMyName(); // we can excute the function any time
+
+
+     // Bind Method Start
+     let printMyName2 = printFullName.bind(name2, 'Tirunelveli', 'TamilNadu'); // store the function in let 
+     console.log(printMyName); // Can see the retun function
+     printMyName2(); // we can excute the function any time
+
+     // Bind Method Start
+     let printMyName3 = printFullName.bind(name3, 'Tirunelveli', 'TamilNadu'); // store the function in let 
+     console.log(printMyName); // Can see the retun function
+     printMyName3(); // we can excute the function any time
 
   }
 }
