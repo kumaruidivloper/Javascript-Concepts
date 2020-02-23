@@ -12,31 +12,26 @@ export class AppComponent {
 
     let name ={
       firstname: 'Kumar',
-      lastname: 'Shan',
-      printFullName: function () {
-        console.log(this.firstname + ' ' + this.lastname);
-      }
+      lastname: 'Shan'
+      // This function Moved to out side of the object
+    }
+
+    let printFullName = function () {
+      console.log(this.firstname + ' ' + this.lastname);
     }
 
     // Access the method 
-    name.printFullName();
+    printFullName.call(name);
 
+    
 
     let name2 = {
       firstname: 'Krishaan',
       lastname: 'Kumar',
-
-      // This way we can but not good approch
-
-      // printFullName: function () {
-      //   console.log(this.firstname + ' ' + this.lastname);
-      // }
-
     }
+    // Access the method 
+    printFullName.call(name2);
 
-    // Function Borrowing
-    // call method can accept two argumaents FirstArg: scope Of this, SecondArg: Parameters
-    name.printFullName.call(name2);
 
   }
 }
